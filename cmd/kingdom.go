@@ -63,6 +63,11 @@ func generateKingdom() {
 
 				ouwsdk.SetAdd(ouwsdk.KEY_KINGDOMS, k.Name)
 
+				for _, v := range k.Municipals {
+					ouwsdk.SetAdd(fmt.Sprintf("%s:%s:%s", ouwsdk.KEY_KINGDOM,
+				    k.Name, ouwsdk.KEY_MUNICIPALS), v.Name)
+				}
+
 			}
 
 		}

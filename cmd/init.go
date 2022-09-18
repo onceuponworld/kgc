@@ -40,7 +40,9 @@ func init() {
 
 func createProfile() {
 
-	var k Kingdom
+	k := Kingdom {
+		Municipals: []Municipal{Municipal{}},
+	}
 
 	j, err := json.MarshalIndent(k, EMPTY_STR, CHAR_TAB)
 

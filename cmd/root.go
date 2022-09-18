@@ -43,6 +43,18 @@ const (
 )
 
 
+type Municipal struct {
+	Name									string      `json:"name"`
+	Population            string      `json:"population"`
+	Land									int					`json:"land"`
+	Wealth								int					`json:"wealth"`
+	Trees             		int					`json:"trees"`
+	Rocks                 int         `json:"rocks"`
+	Grass                 int         `json:"grass"`
+	Cows                 	int         `json:"cows"`
+}
+
+
 type Kingdom struct {
 	Name									string      `json:"name"`
 	Capital               string      `json:"capital"`
@@ -59,7 +71,7 @@ type Kingdom struct {
 	Cows                 	int         `json:"cows"`
 	TaxRate               int         `json:"taxRate"`
 	ConscriptAge    			int         `json:"conscriptAge"`
-	Municipals            [] string 	`json"municipals"`
+	Municipals            [] Municipal 	`json"municipals"`
 }
 
 
